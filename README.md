@@ -1,10 +1,16 @@
-# Machine Learning Project: Motion Sensor APIs + Web Sockets (JavaScript + Python)
+# Machine Learning Project: Gesture Recognition
 
 This project uses the phone's built-in accelerometer and gyroscope and the Sensor APIs to record data and train a machine learning algorithm.
 
 
-## Current status
+## Technologies
+- Sensor APIs
+- Web Sockets
+- JavaScript
+- Python
 
+
+## Current status
 *WIP*
 
 
