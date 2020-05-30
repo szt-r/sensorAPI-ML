@@ -1,9 +1,8 @@
 # Machine Learning Project: Gesture Recognition
-
 This project uses the phone's built-in accelerometer and gyroscope and the Sensor APIs to record data and train a machine learning algorithm.
 
 
-## Technologies
+## This project uses:
 - Sensor APIs
 - Web Sockets
 - JavaScript
@@ -16,5 +15,9 @@ This project uses the phone's built-in accelerometer and gyroscope and the Senso
 
 ## Commands
 1. `conda activate abc-ml`
-2. `python server.python`
+2. `python wss-server.py`
 3. `python httpsserver.py`
+
+
+## SSL
+- openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.pem -out localhost.pem
