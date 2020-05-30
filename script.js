@@ -24,16 +24,16 @@ function initSensors() {
 
 window.onload = function () {
   initSensors();
-  document.body.addEventListener('touchstart', (e) => {
+  document.body.addEventListener('touchstart', e => {
     document.body.classList.add('touched');
     interval = setInterval(() => {
       ws.send(`${accelerometerData.x} ${accelerometerData.y} ${accelerometerData.z} ${gyroscopeData.x} ${gyroscopeData.y} ${gyroscopeData.z}`)
-      // console.log('motion data', `${accelerometerData.x} ${accelerometerData.y} ${accelerometerData.z} ${gyroscopeData.x} ${gyroscopeData.y} ${gyroscopeData.z}`)
     }, 10);
   })
 
-  document.body.addEventListener('touchend', (e) => {
+  document.body.addEventListener('touchend', e => {
     document.body.classList.remove('touched');
+    ws.send('end')
     clearInterval(interval);
   });
 }
